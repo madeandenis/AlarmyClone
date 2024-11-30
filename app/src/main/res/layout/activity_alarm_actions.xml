@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="alarm_actions_wallpaper"
+        android:scaleType="centerCrop"
+        android:src="@drawable/alarm_actions_green"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/black_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#92000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="00:00"
+        android:textColor="#FFFFFF"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/background_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_image"
+        app:layout_constraintVertical_bias="0.273"
+        tools:ignore="HardcodedText" />
+
+    <!-- Dismiss Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dismissButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeTextView"
+        android:layout_centerHorizontal="true"
+        android:text="Dismiss"
+        android:textAllCaps="false"
+        android:paddingHorizontal="36dp"
+        android:paddingVertical="24dp"
+        android:background="@drawable/rounded_dismiss_button"
+        android:textColor="#F7FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/background_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.789"
+        tools:ignore="HardcodedText" />
+
+
+    <!-- Snooze Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/snoozeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dismissButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_snooze_button"
+        android:paddingHorizontal="28dp"
+        android:text="Snooze"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/dismissButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
